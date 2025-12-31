@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Link</title>
+    <style>
+    /* 스타일링 링크 */
+        a {
+            color:blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 호버 효과 */
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* 방문한 링크 */
+        a:visited {
+            color:purple;
+        }
+
+        /* 클릭한 링크 */
+        a:active {
+            color: green;
+        }
+
+        /* 포커스 링크 */
+        a:focus {
+            outline: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>styled Link</h1>
+    <p> 일반링크: 
+        <a href="#">Normal Link</a></p>
+    <p> 외부 링크: 
+        <a href="#" 
+           target="_blank" <!-- 새로운 페이지에서 링크 열기 -->
+           rel="noopener noreferrer"> <!-- _blank와 함께 사용 필수, 피싱 공격(Reverse Tabnabbing) 방지 -->
+           External Link</a></p>
+    <p> 내부 링크: 
+        <a href="#">Internal Link</a></p>
+</body>
+</html>

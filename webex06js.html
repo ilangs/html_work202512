@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JAVA SCRIPT 연습</h1>
+    <form action="">
+        성명: <input type="text" id="name">
+        <input type="button" value="확인" id="btn">
+    </form>
+    <hr>
+    <div id="result">
+        결과:
+    </div>
+
+    <script>
+        // 자바스크립트 한줄 주석
+        /*
+        자바스트립트
+        여러줄 주석
+        */
+        // 변수 선언할 때는 var 또는 let 키워드로 시작
+        var btn = document.getElementById("btn");
+        // console.log(btn);
+        // console.dir(btn);
+        
+        // 함수 선언은 function으로 시작, {}블럭으로 사용
+        function testFn() {
+            document.body.bgColor = "yellow";
+            // id가 name인 input의 립력값을 가져오기
+            var nameInput = document.getElementById("name");
+            // input에 입력된 데이터를 console에 출력
+            console.log(nameInput.value)
+            // id가 result인 div에 내용을 적는다.
+            var resultBox = document.getElementById("result");
+            console.dir(resultBox);
+            resultBox.innerText = `결과: ${nameInput.value}`;
+            nameInput.value = "";
+            nameInput.focus();
+        }
+        // 함수는 호출해야 실행
+        // testFn();
+
+        // 이벤트(바튼 누르기)가 발생하면 호출하도록 변경, 함수 이름을 속성에 넣어준다.
+        // 함수 이름에 ()괄호를 붙이면 실행하라는 뜻.
+        btn.onclick = testFn;
+    </script>
+</body>
+</html>
