@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>범준샘 AI 아카데미</h1>
+    <ul>
+        <li><a href="webex01.html" target="myframe">Home</a></li>
+        <li><a href="webex02.html" target="myframe">Profile</a></li>
+        <li><a href="webex03.html" target="myframe">Gallery</a></li>
+        <li><a href="webex04img.html" target="myframe">Lecture</a></li>
+    </ul>
+    <iframe 
+    id="myframe"
+    name="myframe"
+    src="./images/img02.jpg" 
+    width= "500" height="500" 
+    frameborder="0"
+    scrolling="no"></iframe>
+
+<script>
+    const iframe= document.getElementById("myframe")
+
+    iframe.onload = function() {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        iframe.style.height = iframeDoc.body.scrooleHeightr + 30 + "px" ;
+    };
+</script>
+</body>
+</html>

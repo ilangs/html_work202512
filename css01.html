@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 스타일 주석 */
+        form[name="myForm"] fieldset {
+            width: 400px;
+        } 
+        form[name="myForm"] input {
+            width: 385px;
+        } 
+        input[type="text"] {
+            background-color: skyblue;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        input[name=input1]:nth-child(4) {
+            border: 2px dotted green;
+        }
+        input[name=input2]:focus {
+            background-color: pink;
+        }
+        input[name=input3] {
+            border: none;
+            border-bottom: 4px solid blue;
+            background-color: skyblue;
+        }
+        input[name=input3] {
+            width: 200px;
+            transition: width 0.4s ease-in-out ;
+        }
+        input[name=input4]:focus {
+            width: 100%x;
+        }
+        input[name=input4] {
+            transition: width 0.5s cubic-bezier(.19,.77,.85,.49);
+        }
+    </style>
+</head>
+<body>
+    <h1>폼 스타일 꾸미기</h1>
+    <form action="" name="myForm">
+        <fieldset>
+            <label for="">input css1</label><br>
+            <input type="text" name="input1"><br>
+            <label for="">input css2</label><br>
+            <input type="text"name="input2"><br>
+            <label for="">input css3</label><br>
+            <input type="text"name="input3"><br>
+            <label for="">input css4</label><br>
+            <input type="text"name="input4"><br>
+        </fieldset>
+    </form>
+</body>
+</html>
