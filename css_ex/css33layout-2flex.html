@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: skyblue;
+            height: 100vh;
+            gap: 0.5rem;
+        }
+        .item:nth-child(even) {
+            background-color: blueviolet;
+        }
+        .item:nth-child(odd) {
+            background-color: coral;
+        }
+        .item {
+            flex-basis: 5rem;
+            padding: 1rem;
+            text-align: center;
+            text-shadow: 2px 2px 2px gray;
+            color: white;
+            flex-grow: 1;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .item {
+                flex-basis: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item box1">텍스트1</div>
+        <div class="item box2">텍스트2</div>
+        <div class="item box3">텍스트3</div>
+        <div class="item box4">텍스트4</div>
+        <div class="item box5">텍스트5</div>
+        <div class="item box6">텍스트6</div>
+        <div class="item box7">텍스트7</div>
+        <div class="item box8">텍스트8</div>
+        <div class="item box9">텍스트9</div>
+        <div class="item box10">텍스트10</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Table</title>
+  <style>
+    .gundam {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .gundam :is(th, td) {
+        border: 1px solid gray;
+        padding: 0.25rem;
+        text-align: center;
+    }
+    .gundam tr:nth-child(even) {
+        background-color: lightgrey;
+    }
+    .gundam tr:hover {
+        background-color: beige;
+    }
+    .gundam th {
+        background-color: blueviolet;
+        color: white;
+    }
+    .gundam img {
+        vertical-align: bottom;
+    }
+  </style>
+
+</head>
+<body>
+  <h2>CSS Table을 배워봅시다.</h2>
+
+  <table class="gundam">
+    <caption></caption>
+    <thead>
+      <tr>
+        <th>이미지</th>
+        <th>이름</th>
+        <th>모델명</th>
+        <th>제조사</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=1" alt="이미지"></td>
+        <td>건담</td>
+        <td>RX-78-2</td>
+        <td>Earth Federation</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=2" alt="이미지"></td>
+        <td>건캐논</td>
+        <td>RX-77-2</td>
+        <td>Earth Federation</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=3" alt="이미지"></td>
+        <td>건탱크</td>
+        <td>RX-75</td>
+        <td>Earth Federation</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=4" alt="이미지"></td>
+        <td>짐</td>
+        <td>RGM-79</td>
+        <td>Earth Federation Forces</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=5" alt="이미지"></td>
+        <td>자쿠 II</td>
+        <td>MS-06F</td>
+        <td>Zeonic Company</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=6" alt="이미지"></td>
+        <td>샤아 전용 자쿠 II</td>
+        <td>MS-06S</td>
+        <td>Zeonic Company</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=7" alt="이미지"></td>
+        <td>돔</td>
+        <td>MS-09B</td>
+        <td>Zimmad Company</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=8" alt="이미지"></td>
+        <td>릭 돔</td>
+        <td>MS-09R</td>
+        <td>Zimmad Company</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=9" alt="이미지"></td>
+        <td>즈고크 E</td>
+        <td>MSM-07E</td>
+        <td>MIP Company</td>
+      </tr>
+      <tr>
+        <td><img src="https://picsum.photos/80/80?random=10" alt="이미지"></td>
+        <td>씨그</td>
+        <td>ZGMF-515</td>
+        <td>Zodiac Alliance of Freedom Treaty</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</body>
+</html>

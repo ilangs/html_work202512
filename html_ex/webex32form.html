@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYML Form</title>
+    <style>
+        html, body {
+            margin: 5px;
+            padding: 0px;
+        }
+        h3 {
+            margin: 0px;
+            padding: 1rem;
+            max-width: 100%;
+            background-color: blueviolet;
+            color: white;
+        }
+        .todo {
+            max-width: 100%;
+            padding: 1rem;
+            background-color: beige;
+        }
+        input, label, textarea {
+            width: 15rem;
+        }
+        input[type="submit"] {
+            border-radius: 0.5rem;
+        }
+        :is(.radio, .checkbox) input {
+            width: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h3>ToDo</h3>
+    <div class="ToDo">
+        <form action="#">
+            <label>할일:</label><br>
+            <input type="text" name="title"/><br>
+            <label>언제:</label><br>
+            <input type="datetime-local" name="day"/><br>
+            <label>컬러:</label><br>
+            <input type="color" name="display"/><br>
+            <label>종류:</label><br>
+            <input type="text" list="category" name="kind"/><br>
+
+            <datalist id="category">
+                <option value="가족 행사"></option>
+                <option value="가족 구성원 관련"></option>
+                <option value="친구"></option>
+                <option value="학교 행사"></option>
+                <option value="수업 관련"></option>
+            </datalist><br>
+
+            <label>중요도:</label><br>
+            <div class="radio importance">
+                <div>
+                    <input type="radio" name="importance" value="very high">
+                    <label for="high">매우 중요</label>
+                </div>
+                <div>
+                    <input type="radio" name="importance" value="high">
+                    <label for="high">중요</label>
+                </div>
+                <div>
+                    <input type="radio" name="importance" value="normal">
+                    <label for="high">보통</label>
+                </div>
+                <div>
+                    <input type="radio" name="importance" value="below">
+                    <label for="high">이하</label>
+                </div>
+            </div><br>
+
+            <label for="">알람:</label><br>
+            <div class="checkbox alarm">
+                <div>
+                    <input type="checkbox" name="alarm" value="month">
+                    <label for="month">한달전</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="alarm" value="week">
+                    <label for="week">일주일전</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="alarm" value="day">
+                    <label for="day">하루전</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="alarm" value="hour">
+                    <label for="hour">한시간전</label>
+                </div>
+            </div><br>
+
+            <label>메모</label><br>
+            <textarea name="memo" rows="10"></textarea><br>
+
+            <br>
+            <input type="submit" value="제출"/>
+        </form>
+    </div>
+
+
+    <!-- <h3>
+        노래방 검색
+    </h3>
+    <form action="https://www.youtube.com/results">
+        <label>검색 단어:</label><br>
+        <input type="text" name="search_query" value="노래방+"/><br>
+        <br>
+        <input type="submit" value="제출"/>
+    </form> -->
+
+
+    <!-- <h3>
+        검색 엔진 만들었습니다.
+    </h3>
+    <form action="https://www.google.com/search">
+        <label>검색 단어:</label><br>
+        <input type="text" name="q"/><br>
+        <br>
+        <input type="submit" value="제출"/>
+    </form> -->
+
+
+    <!-- <h3>
+        연락처 관리
+    </h3>
+    <form>
+        <label>이름:</label><br>
+        <input type="text" name="name" placeholder="이름"/><br>
+        <label>e-mai 주소:</label><br>
+        <input type="email" name="email" placeholder="abc@def.com"/><br>
+        <label>전회번호:</label><br>
+        <input type="tel" name="phone" 
+            placeholder="010-1234-5678" 
+            pattern="010-[0-9]{4}-[0-9]{4}"><br>
+        <br>
+        <input type="submit" value="제출"/>
+    </form> -->
+
+</body>
+</html>
