@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        .item {
+            background-color: rgb(170, 255, 0);
+        }
+        .container {
+            background-color: rgb(0, 123, 255, 0.5);
+        }
+        .character {
+            background-color: rgba(255, 34, 0, 0.3);
+        }
+        .game {
+            background-color: rgb(68, 128, 0, 0.5);
+        }
+        .character > .item {
+            background-color: rgb(180, 206, 157);
+            margin: 0.25rem;
+            border: 3px dashed rgb(255, 115, 0);
+            padding: 0.5rem;
+        }
+        #char2, #char4 {
+            background-color: aqua;
+        }
+        [id=char2], [id=char4] {
+            background-color: skyblue;
+        }
+        #w3schools[open] {
+            background: no-repeat center/cover
+            url("https://www.w3schools.com//640/480/any");
+            color: white; 
+            text-shadow: 2px 2px 2px gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.container>ul.character>li.item.character$*5 -->
+    <div class="container">
+        <p>뽀로로 캐릭터</p>
+        <ul class="character">
+            <li class="item character1" id="char1">뽀로로</li>
+            <li class="item character2" id="char2">코코몽</li>
+            <li class="item character3" id="char3">라바</li>
+            <li class="item character4" id="char4">또봇</li>
+            <li class="item character5" id="char5">크롱</li>
+        </ul>
+    </div>
+    <!-- div.container>ul.game>li.item.game$*5 -->
+    <div class="container">
+        <p>인기 게임</p>
+        <ul class="game">
+            <li class="item game1">스타크래프트</li>
+            <li class="item game2">배틀그라운드</li>
+            <li class="item game3">오버워치</li>
+            <li class="item game4">로스트아크</li>
+            <li class="item game5">피라온라인</li>
+        </ul>
+    </div>
+
+    <details id="w3schools">
+        <summary>유용한 사이트: w3schools.com</summary>
+        palceholder (자리 차지하는) 프로그래밍 언어 튜토리얼을 제공하는 사이트로 매우 편리하다.
+    </details>
+
+</body>
+</html>
